@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane prefHeight="350.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EditorController">
+
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+         <menus>
+           <Menu text="文件(F)">
+              <items>
+                      <MenuItem accelerator="Ctrl + N" mnemonicParsing="true" onAction="#onFileNew" text="新建(N)" />
+                      <MenuItem accelerator="Ctrl + O" mnemonicParsing="true" onAction="#onFileOpen" text="打开(O)" />
+                      <MenuItem accelerator="Ctrl + S" mnemonicParsing="true" onAction="#onFileSave" text="保存(s)" />
+                      <MenuItem onAction="#onFileSaveAs" text="另存为(A)" />
+                      <SeparatorMenuItem />
+                      <MenuItem onAction="#onExit" text="退出(X)" />
+              </items>
+           </Menu>
+           
+           <Menu text="编辑(E)">
+              <items>
+                  <MenuItem fx:id="undoItem" accelerator="Ctrl + Z" disable="true" mnemonicParsing="true" onAction="#onUndo" text="撤销(U)" />
+                  <SeparatorMenuItem />
+                  <MenuItem fx:id="cutItem" accelerator="Ctrl + X" disable="true" mnemonicParsing="true" onAction="#onCut" text="剪切(T)" />
+                  <MenuItem fx:id="copyItem" accelerator="Ctrl + C" disable="true" mnemonicParsing="true" onAction="#onCopy" text="复制(C)" />
+                  <MenuItem fx:id="pasteItem" accelerator="Ctrl + V" mnemonicParsing="true" onAction="#onPaste" text="粘贴(P)" />
+                  <MenuItem fx:id="deleteItem" accelerator="Del" disable="true" mnemonicParsing="true" onAction="#onDelete" text="删除(L)" />
+                  <SeparatorMenuItem />
+                  <MenuItem fx:id="searchItem" accelerator="Ctrl + F" disable="true" mnemonicParsing="true" onAction="#onSearch" text="查找(F)" />
+                  <MenuItem accelerator="Ctrl + H" mnemonicParsing="true" onAction="#onReplace" text="替换(R)" />
+                  <MenuItem fx:id="gotoItem" accelerator="Ctrl + G" disable="true" mnemonicParsing="true" onAction = "#onGoto" text="转到(G)" />
+                  <SeparatorMenuItem />
+                  <MenuItem accelerator="Ctrl + A" mnemonicParsing="true" onAction="#onSelectAll" text="全选(A)" />
+                  <MenuItem accelerator="F5" mnemonicParsing="true" onAction = "#showDate" text="时间/日期(D)" />
+              </items>
+           </Menu>
+           
+           <Menu text="格式(O)">
+              <items>
+                  <CheckMenuItem fx:id="cmi" onAction="#onAutoWrap" selected="true" text="自动换行(W)" />
+                  <MenuItem onAction="#showFont" text="字体(F)" />
+              </items>
+           </Menu>
+           
+           <Menu text="查看(V)">
+              <items>
+                  <CheckMenuItem fx:id="viewItem" disable="true" onAction="#showStatus" text="状态栏(S)" />
+              </items>
+           </Menu>
+           
+           <Menu text="帮助(H)">
+              <items>
+                  <MenuItem onAction="#onHelp" text="查看帮助(H)" />
+                  <SeparatorMenuItem />
+                  <MenuItem onAction="#onAboutEditor" text="关于记事本(A)" />
+              </items>
+           </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+   
+   <center>
+      <TextArea fx:id="textArea" minHeight="0" minWidth="0" prefHeight="308.0" prefWidth="400.0" wrapText="true" BorderPane.alignment="CENTER" />
+   </center>
+   
+   <bottom>
+      <HBox fx:id="statusBar" prefHeight="19.0" prefWidth="400.0" visible="false" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="statusLabel" prefHeight="15.0" prefWidth="180.0" text="第1行，第1列">
+               <HBox.margin>
+                  <Insets left="250.0" top="3.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

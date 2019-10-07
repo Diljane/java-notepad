@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="150.0" prefWidth="300.0" 
+			xmlns:fx="http://javafx.com/fxml/1" 
+			xmlns="http://javafx.com/javafx/8"
+			fx:controller="application.GotoController">
+   <children>
+      <Label layoutX="31.0" layoutY="28.0" text="行号(L):">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="rowTextField" layoutX="31.0" layoutY="64.0" prefHeight="23.0" prefWidth="241.0" />
+      <Button layoutX="150.0" layoutY="105.0" mnemonicParsing="false" onAction="#gotoRow" text="转到">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="224.0" layoutY="105.0" mnemonicParsing="false" onAction="#cancel" text="取消">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

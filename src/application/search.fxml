@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="169.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SearchController">
+   <children>
+      <Label layoutX="28.0" layoutY="38.0" text="查找内容(N):">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="219.0" layoutY="100.0" text="方向">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="isCompareNoCase" layoutX="28.0" layoutY="136.0" mnemonicParsing="false" text="区分大小写(C)">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </CheckBox>
+      <RadioButton fx:id="upRadioBtn" layoutX="164.0" layoutY="136.0" mnemonicParsing="false" text="向上(U)">
+         <toggleGroup>
+            <ToggleGroup fx:id="directionToggleGroup" />
+         </toggleGroup>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="downRadioBtn" layoutX="247.0" layoutY="136.0" mnemonicParsing="false" selected="true" text="向下(D)" toggleGroup="$directionToggleGroup">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <TextField fx:id="searchText" layoutX="120.0" layoutY="36.0" />
+      <Button fx:id="btn1" layoutX="294.0" layoutY="36.0" mnemonicParsing="false" onAction="#searchNext" text="查找下一个(F)" />
+      <Button layoutX="294.0" layoutY="77.0" mnemonicParsing="false" onAction="#cancel" text="取消" />
+   </children>
+</AnchorPane>

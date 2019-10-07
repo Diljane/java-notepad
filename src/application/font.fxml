@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FontController">
+   <children>
+      <Label layoutX="34.0" layoutY="32.0" text="字体(F)：">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="175.0" layoutY="32.0" text="字形(Y):">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="306.0" layoutY="32.0" text="大小(S):">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ListView fx:id="fontList" layoutX="8.0" layoutY="64.0" prefHeight="200.0" prefWidth="112.0" />
+      <ListView fx:id="styleList" layoutX="139.0" layoutY="64.0" prefHeight="200.0" prefWidth="112.0" />
+      <ListView fx:id="sizeList" layoutX="274.0" layoutY="64.0" prefHeight="200.0" prefWidth="112.0" />
+      <Label layoutX="33.0" layoutY="280.0" text="示例">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="293.0" layoutY="288.0" mnemonicParsing="false" onAction="#isOK" text="确认">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="293.0" layoutY="343.0" mnemonicParsing="false" onAction="#cancel" text="取消">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="showLabel" layoutX="72.0" layoutY="282.0" prefHeight="102.0" prefWidth="194.0" text="我爱Java">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

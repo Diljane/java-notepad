@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="227.0" prefWidth="427.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ReplaceController">
+   <children>
+      <Label layoutX="14.0" layoutY="57.0" prefHeight="19.0" prefWidth="97.0" text="查找内容(N):">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="96.0" prefHeight="19.0" prefWidth="97.0" text="替换为(P):">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="isCompareNoCase" layoutX="14.0" layoutY="179.0" mnemonicParsing="false" text="区分大小写(C)">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </CheckBox>
+      <TextField fx:id="searchText" layoutX="106.0" layoutY="52.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="replaceText" layoutX="106.0" layoutY="91.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btn1" layoutX="302.0" layoutY="52.0" mnemonicParsing="false" onAction="#searchNext" text="查找下一个(F)">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn2" layoutX="302.0" layoutY="94.0" mnemonicParsing="false" onAction="#replace" text="替换(R)">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn3" layoutX="303.0" layoutY="135.0" mnemonicParsing="false" onAction="#replaceAll" text="全部替换(A)">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="303.0" layoutY="174.0" mnemonicParsing="false" onAction="#cancel" text="取消">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
